@@ -14,7 +14,7 @@ function getScheme(colorScheme, addNav = false) {
 
 function render(data, addNav) {
     const optionsHtml = colorScheme.schemeMode
-        .reduce( (acc, scheme) => acc + `<option>${scheme}</option>`,'');
+        .reduce( (acc, mode) => acc + `<option>${mode}</option>`,'');
     const colorsArr = data.colors.map(color => color.hex.value); 
     const colorsHtml = colorsArr.reduce((acc, color) => acc + `
         <div class="color" style="background-color: ${color};">
