@@ -9,7 +9,7 @@ function getScheme(colorScheme, addNav = false) {
     const {seedColor, mode, count} = colorScheme;
     fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${mode}&count=${count}`)
         .then(res => res.json())
-        .then(data => render(data, addNav))
+        .then(data => render(data, addNav));
 }    
 
 function render(data, addNav) {
